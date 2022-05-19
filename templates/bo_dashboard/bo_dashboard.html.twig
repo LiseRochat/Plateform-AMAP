@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('css/backoffice.css')}}">
+{% endblock %}
+
+{% block title %}HO | Tableau de bord{% endblock %}
+
+{% block body %}
+
+<section>
+<div class="content">
+<!--ANALYTICS-->
+    <article class="analytics page-content"><img style="display: block;width: 60%; margin:auto;" src="{{asset('assets/graphique.png')}}" alt="simulation de graphique"></article>
+
+    <!--INSCRIPTIONS-->
+<article class="inscription p-2 page-content m-2-left scroller scroller-custom">
+        <div class="flex">
+            <h2 class="h2">Inscriptions<span class="textDetails">(23)</span></h2>
+        </div>
+        <p class="textDetails p-1-v">Retrouvez vos derniers contrats ici !</p>
+        <ul>
+            <li class="p-1-v"><hr></li>
+            <li class="flex-center-spacebetween"><p class="p p-1-h">Inscription Jean Dupont</p><div><img class="p-2-h icone" src="{{asset('assets/import_icon.svg')}}" alt="icone import contrats inscription"><img src="{{asset('assets/eye-dark_icon.svg')}}" alt="icone voir contrats inscription d'inscription"></div></li>
+            <li class="p-1-v"><hr></li>
+            <li class="flex-center-spacebetween"><p class="p p-1-h">Inscription Martine Dupont</p><div><img class="p-2-h icone" src="{{asset('assets/import_icon.svg')}}" alt="icone import contrats inscription"><img src="{{asset('assets/eye-dark_icon.svg')}}" alt="icone voir contrats inscription d'inscription"></div></li>
+            <li class="p-1-v"><hr></li>
+            <li class="flex-center-spacebetween"><p class="p p-1-h">Inscription Chantal Ferdo</p><div><img class="p-2-h icone" src="{{asset('assets/import_icon.svg')}}" alt="icone import contrats inscription"><img src="{{asset('assets/eye-dark_icon.svg')}}" alt="icone voir contrats inscription d'inscription"></div></li>
+            <li class="p-1-v"><hr></li>
+            <li class="flex-center-spacebetween"><p class="p p-1-h">Inscription Lou Martin</p><div><img class="p-2-h icone" src="{{asset('assets/import_icon.svg')}}" alt="icone import contrats inscription"><img src="{{asset('assets/eye-dark_icon.svg')}}" alt="icone voir contrats inscription d'inscription"></div></li>
+            <li class="p-1-v"><hr></li>
+            <li class="flex-center-spacebetween"><p class="p p-1-h ">Inscription Kevin Chantin</p><div><img class="p-2-h icone" src="{{asset('assets/import_icon.svg')}}" alt="icone import contrats inscription"><img src="{{asset('assets/eye-dark_icon.svg')}}" alt="icone voir contrats inscription d'inscription"></div></li>
+            <li class="p-1-v"><hr></li>
+            <li class="flex-center-spacebetween"><p class="p p-1-h ">Inscription Lise Stocker</p><div><img class="p-2-h icone" src="{{asset('assets/import_icon.svg')}}" alt="icone import contrats inscription"><img src="{{asset('assets/eye-dark_icon.svg')}}" alt="icone voir contrats d'inscription"></div></li>
+            <li class="p-1-v"><hr></li>
+            <li class="flex-center-spacebetween"><p class="p p-1-h">Inscription Erwan Porte</p><div><img class="p-2-h icone" src="{{asset('assets/import_icon.svg')}}" alt="icone import contrats inscription"><img src="{{asset('assets/eye-dark_icon.svg')}}" alt="icone voir contrats d'inscription"></div></li>
+            <li class="p-1-v"><hr></li>
+        </ul>
+    </article>
+</div>
+
+<!--MESSAGES-->
+<article class="messages p-2 page-content m-2-v scroller scroller-custom">
+    <div class="flex-center-spacebetween w-10">
+        <h2 class="h2">Messages <span class="textDetails">(23)</span></h2>
+        <input id="searchbar" onkeyup="search_products ()" type="text" name="search" placeholder="Rechercher un produit">
+    </div>
+    <ul>
+        <li class="p-1-v"><hr></li>
+        <li class="flex-center-spacebetween p-3-h icone"><p class="p-bold p-1-v">Clémentine Cerise</p><img class="open-message-icon" src="{{asset('assets/seeLess_icon.svg')}}" alt="icone voir moins"><div>10 novembre 2021</div></li>
+        <li><p class="p-3-h">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis vulputate purus. Integer et pellentesque odio, sed ultricies nisl. In finibus ante nec risus volutpat, vel consectetur orci luctus. In vitae orci eu ante eleifend accumsan. Quisque pretium, quam eleifend sollicitudin vulputate,</p></li>
+        <li class="flex-end"><button class="btn border-button-alert m-2-h">SUPPRIMER</button><button class="btn sweet-button m-1-right">RÉPONDRE</button></li>
+        <li class="p-1-v"><hr></li>
+        <li class="flex-center-spacebetween p-3-h icone"><img class="point-message-icon" src="{{asset('assets/point_icon.svg')}}" alt="message"><p class="p-bold p-2-h">Mathilde Azerty</p><img class="open-message-icon" src="./assetsbo/seeMore_icon.svg" alt=""><div>10 novembre 2021</div></li>
+        <li class="p-1-v"><hr></li>
+        <li class="flex-center-spacebetween p-3-h icone"><p class="p-bold">Léo Plop</p><img class="open-message-icon" src="{{asset('assets/seeMore_icon.svg')}}" alt="icone voir plus"><div>07 novembre 2021</div></li>
+        <li class="p-1-v"><hr></li>
+        <li class="flex-center-spacebetween p-3-h icone"><p class="p-bold">Roger Pagnol</p><img class="open-message-icon" src="{{asset('assets/seeMore_icon.svg')}}" alt="icone voir moins"><div>10 octobre 2021</div></li>
+        <li class="p-1-v"><hr></li>
+    </ul>
+</article>
+</section>         
+
+{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+            <script type="text/javascript" src="{{asset('js/navbo.js')}}"></script>
+        {% endblock %}

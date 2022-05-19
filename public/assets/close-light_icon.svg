@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-close-light_icon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="close-light_icon" clip-path="url(#clip-close-light_icon)">
+    <g id="cancel_black_24dp">
+      <path id="Tracé_100" data-name="Tracé 100" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Tracé_101" data-name="Tracé 101" d="M12,2A10,10,0,1,0,22,12,9.991,9.991,0,0,0,12,2Zm5,13.59L15.59,17,12,13.41,8.41,17,7,15.59,10.59,12,7,8.41,8.41,7,12,10.59,15.59,7,17,8.41,13.41,12Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

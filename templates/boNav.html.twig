@@ -1,0 +1,57 @@
+{% block stylesheet %}
+    <link href="{{ asset('css/backoffice.css') }}" rel="stylesheet"> 
+{% endblock %}
+<header class="menu-top-bg">
+	<div class="menu-top-content">
+		<div class="sideBarAlign"><img src="{{asset('assets/logo.svg') }}" alt="logo" class="icon"></div>
+		<nav>
+			<ul class="menu-top-content">
+				<li class="flex-start">
+					<a class="textLink-light link-icon" href="{{path('fo_home')}}"><img src="{{asset('assets/eye-light_icon.svg') }}" alt="icone oeil" class="icon">voir le site</a>
+				</li>
+				<li class="m-1-h">
+					<a href="#" class="textLink-light link-icon" id="position-a">
+						<img src="{{asset('assets/admin_icon.svg') }}" alt="icon admin" class="icon">Mon compte
+					</a>
+					<section class="cardShow card shadow p p-2 b-1" id="card" style="flex-direction:column">
+						<div class="flex-center-spacebetween b-1-b  p-1-v">
+							<p>Mon compte</p>
+							<a href="#" class="hidden nav-close"><img src="{{asset('assets/close2_icon.svg') }}" alt="close" class="icon"></a>
+						</div>
+						<ul>
+							<li class="m-1-v">
+							{{ app.user.firstname }} {{ app.user.lastname }}
+							<br><span class="textDetails">
+							{{ app.user.email }}
+							</span>
+							</li>
+							{# <li class="m-1-v" style="opacity:0.5">
+								<a href="">inviter un nouvel admin</a>
+							</li> #}
+							{# <li class="m-1-v">
+								<a href="#" class="p">Modifier mes informations</a>
+							</li>
+							<li class="m-1-v">
+								<a href="#"  class="p" style="color:#EC6262">supprimer mon compte</a>
+							</li> #}
+							<li class="m-1-v"><a href="{{ path('app_logout') }}" class="p" style="">se déconnecter</a></li>
+
+							<li class="m-1-v">
+								<a href="#" class="flex-center-h"><img src="{{asset('assets/information-dark_icon.svg') }}" alt="icon aide" class="icon">
+									Aide
+								</a>
+							</li>
+						</ul>
+					</section>
+				</li>
+			</ul>
+			<button class="textLink-light link-icon"><img src="{{asset('assets/notifications-no_icon.svg') }}"  class="icone notification"></button>
+		</nav>
+	</div>
+</header>
+
+
+
+
+
+        	

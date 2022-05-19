@@ -1,0 +1,217 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/boProducts.css') }}" rel="stylesheet">
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+	HO | Page Inscription
+{% endblock %}
+
+{% block body %}
+<section class="flex-center-h m-1-bottom">
+        <p class="arianeText">pages |</p>
+        <h1 class="h1-green">Page Inscription</h1>
+      </section>
+      <form method="post">
+        <section class="page-content  p-2">
+
+          <article class=" m-1-b m-3-bottom">
+            <div class="flex-center-h">
+              <div class="circle">1</div>
+              <h2 class="h2 flex-center-h">Formulaire d'inscription </h2><button style="cursor: pointer;"
+                id="openpopup-page-accueil-seo"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information"
+                  class="icon"></button><span class="textDetails">non-modifiable</span>
+            </div>
+            <div class="flex m-2-left">
+              <ul class="w-100">
+                <li class="h3 m-05-top">Nom</li>
+                <li class="h3 m-05-top">Prenom</li>
+                <li class="h3 m-05-top">Adresse mail</li>
+                <li class="h3 m-05-top">Téléphone principal</li>
+                <li class="h3 m-05-top">Adresse
+                  <p class="p m-1-left">Rue<br />Ville</p>
+                </li>
+                <li class="h3 m-05-top">Statut adhérent</li>
+                <li><span class="h3 m-05-top">Engagements généraux</span>
+                  <ul class="p m-1-left rules-list">
+                    <li>➊ Accepter le règlement intérieur de l'association -
+                      https://www.amap-thouamaporte.fr/amap-thouamaporte/association-collectif-commissions#statuts-et-reglement-interieur
+                    </li>
+                    <li>➋ Respecter impérativement l’article 3 du règlement intérieur (pas d'échange d’argent sur le
+                      lieu de
+                      distribution)</li>
+                    <li>➌ Rendre les contrats et les règlements à la date butoir (indiquée ci-après) afin d’en faciliter
+                      la
+                      gestion
+                    </li>
+                    <li>➍ Récupérer ses produits aux jours et heures de distribution prévus par chaque contrat, ou
+                      prévenir les
+                      Producteurs s’il est impossible de les récupérer</li>
+                    <li>➎ Lire les mails relatifs à la vie de l'association et essayer de participer à la vie sociale et
+                      démocratique
+                      de I'AMAP</li>
+                  </ul>
+                </li>
+                <li><span class="h3 m-05-top">Engagements de la distribution des paniers</span>
+                  <ul class="p m-1-left rules-list">
+                    <li class="p">Engagement pour la distribution des paniers</li>
+                    <li>➊ Nous attirons votre attention sur le fait que tout adhérent s'engage à assurer plusieurs
+                      distributions (3 à 4 en cours d'année), et qu'il est responsable de trouver un remplaçant s'il ne
+                      peut pas assurer sa distribution, au plus tard 2 jours avant le mercredi (sauf bien évidemment cas
+                      de force majeure).</li>
+                    <li> ➋ Nous comptons sur vous pour respecter cette demande :-) qui permet d'assurer le bon
+                      déroulement des distributions.</li>
+                  </ul>
+                </li>
+                <li><span class="h3 m-05-top">Partager mes coordonnées pour le co-retrait des paniers</span>
+                  <p class="p m-1-left rules-list">Vous souhaitez savoir si des adhérents de l’AMAP habitent près de
+                    chez vous afin d’organiser des roulements lors du retrait des paniers. Pour cela, il suffit de nous
+                    autoriser à communiquer vos coordonnées (email et adresse) aux autres adhérents. Puis vous vous
+                    arrangez directement…</p>
+                </li>
+                <li>
+                  <div class="flex-center-h"><span class="h3 m-05-top">Rêglement de votre adhésion à </span><input
+                      type="text" value="Nom de votre AMAP" class="m-1-left w-30"></div>
+                  <p class="rules-list">Cette année encore, vous pouvez régler en ligne les 10€ d'adhésion à
+                    l'association. Pour cela, un lien vers la plateforme de paiement en ligne helloasso.com sera indiqué
+                    dans le récapitulatif de votre pré-inscription. Nous vous invitons à choisir cette solution car elle
+                    facilite grandement notre gestion.</p>
+                </li>
+                <li>
+                  <div class="flex-center-h"><span class="h3 m-05-top">► Souhaitez-vous un panier </span>
+                    <select id="panier_options" class="m-1-left">
+                      <option value="allpaniers">Proposer tout les paniers</option>
+                      <option value="panierselection">sélectionner des paniers</option>
+                    </select>
+                  </div>
+                  <ul class="rules-list">
+                    <p>Le panier sera à composer dans le contrat. Exemple de contenu (famille):</p>
+                    <li>1,5kg de pomme de terre</li>
+                    <li>1,4kg de courge muscade</li>
+                    <li>1kg de poireaux</li>
+                    <li>2 salades</li>
+                    <li>1kg de carottes</li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="flex-center-h"><span class="h3 m-05-top">► Souhaitez-vous un produit</span>
+                    <select id="panier_options" class="m-1-left">
+                      <option value="allpaniers">Proposer tout les produits</option>
+                      <option value="panierselection">sélectionner des produits</option>
+                    </select>
+                  </div>
+                  <p>Les produits seront disponibles par contrats suite à l'inscription.</p>
+                </li>
+                <li>
+                  <div class="h3 m-05-top">► A propos du collectif</div>
+                  <textarea name="category" id="category" cols="auto" rows="2" class="w-100 placeholder"
+                    placeholder="Entrez ici la description de votre collectif"></textarea>
+                </li>
+              </ul>
+            </div>
+            <button class="btn sweet-button p-05 m-1-top">Valider</button>
+
+          </article>
+
+
+          <!--FIN FORM INSCRIPTION-->
+          <!--GENERAL COMMITMENTS-->
+
+          <!--STEPS-->
+          <article class="steps m-3-top">
+            <div class="flex-center-h">
+              <div class="circle">2</div>
+              <h2 class="h2 flex-center-h">Partie Explication des étapes</h2><button style="cursor: pointer;"
+                id="openpopup-page-accueil-seo"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information"
+                  class="icon"></button><span class="textDetails">Attention les informations changées ci-dessous
+                seront également changées dans la
+                page
+                produit.</span>
+            </div>
+
+            <!-- étapes -->
+            <div class="m-2-left">
+              <h3 class="h3"><label for="title_bloc">
+                  Titre
+                </label></h3>
+              <input type="text" id="title_bloc" name="title_bloc">
+
+              <label for="description_seo">
+                <h3>Texte</h3>
+              </label>
+              <textarea name="category" id="decription_bloc" cols="auto" rows="" class="w-100 placeholder"
+                placeholder="Entrez ici un rapide descriptif de votre étape"></textarea>
+              <!-- blocs -->
+              <div class=" flex-h-spacearround m-3-v">
+                <div class="b-1 p-05 w-30">
+                  <div class="input-custom">
+                    <img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download"
+                      style="cursor:pointer" />
+                    <input type="file" id="bloc3_image" name="background_image">
+                  </div>
+                  <h3 class="h3"><label for="title_bloc">
+                      Titre
+                    </label></h3>
+                  <input type="text" id="title_bloc" name="title_bloc">
+
+                  <label for="description_seo">
+                    <h3>Texte</h3>
+                  </label>
+                  <textarea name="category" id="decription_bloc" cols="auto" rows="" class="w-100 placeholder"
+                    placeholder="Entrez ici un rapide descriptif de votre étape"></textarea>
+                </div>
+                <div class="b-1 p-05 w-30">
+                  <div class="input-custom">
+                    <img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download"
+                      style="cursor:pointer" />
+                    <input type="file" id="bloc3_image" name="background_image">
+                  </div>
+                  <h3 class="h3"><label for="title_bloc">
+                      Titre
+                    </label></h3>
+                  <input type="text" id="title_bloc" name="title_bloc">
+
+                  <label for="description_seo">
+                    <h3>Texte</h3>
+                  </label>
+                  <textarea name="category" id="decription_bloc" cols="auto" rows="" class="w-100 placeholder"
+                    placeholder="Entrez ici un rapide descriptif de votre étape"></textarea>
+                </div>
+                <div class="b-1 p-05 w-30">
+                  <div class="input-custom">
+                    <img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download"
+                      style="cursor:pointer" />
+                    <input type="file" id="bloc3_image" name="background_image">
+                  </div>
+                  <h3 class="h3"><label for="title_bloc">
+                      Titre
+                    </label></h3>
+                  <input type="text" id="title_bloc" name="title_bloc">
+
+                  <label for="description_seo">
+                    <h3>Texte</h3>
+                  </label>
+                  <textarea name="category" id="decription_bloc" cols="auto" rows="" class="w-100 placeholder"
+                    placeholder="Entrez ici un rapide descriptif de votre étape"></textarea>
+                </div>
+              </div>
+            </div>
+            <button class="btn sweet-button p-05 m-1-top">Valider</button>
+          </article>
+      </section>
+      <div class="flex-h-spacebetween m-2-top">
+        <div class="flex-center-h">
+         
+					<a class="input btn alert-button" href="{{path('bo_pages')}}">Annuler</a>
+				</div>
+
+				<div class="flex">
+					
+					<input type="submit" value="Enregistrer" class="btn sweet-button">
+				</div>
+        </div>
+      </div>
+      </form>
+{% endblock %}

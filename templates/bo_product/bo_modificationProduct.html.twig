@@ -1,0 +1,152 @@
+{% extends 'base.html.twig' %}
+{% block stylesheet %}
+	<link href="{{asset('css/boProducts.css') }}" rel="stylesheet">
+	<link href="{{asset('css/backofficeProducts.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+	{% if  product.title != null %}
+		Admin | Modification Produit
+	{% else %}
+		Admin | Création Produit
+	{% endif %}
+{% endblock %}
+
+{% block body %}
+<section class="flex-center-h m-1-bottom">
+		<!-- Test de du type d'action qui est entrain d'etre faite -->
+		<!-- Modification -->
+		{% if  product.title != null %}
+			<p class="arianeText">{{product.title}} </p>
+			
+		<!-- Création -->
+		{% else %}
+			<p class="arianeText">Produit</p>
+		{% endif %}
+		{% block myTitle %}
+			{% if  product.title != null %}
+				 | Modification
+			<!-- Création -->
+			{% else %}
+				| Creation
+			{% endif %}
+		{% endblock %}
+		<!-- Fin test -->
+	</section>
+
+	<!-- Début formulaire -->
+	{{form_start(form)}}
+	<section class="page-content  p-2">
+		<!-- module presentation amap -->
+		<article class=" m-1-b m-3-bottom">
+			<div class="flex m-2-left">
+				<div class="m-1 w-30">
+					<h3 class="h3">
+						<label for="image_presentation">
+							Image
+						</label>
+					</h3>
+					<div class="input-custom image-box-presentation">
+						<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download " style="cursor:pointer"/>
+						{{form_widget(form.pictureFile)}}
+					</div>
+					<!-- Si nous somme en train de modifier un produit nous affichons l'image -->
+					{% if product.picture != null %}
+						<div>
+							<br><img width="100%" height="100%" src="{{asset('upload/products/' ~ product.picture)}}">
+						</div>
+					{% endif %}
+					<!-- Sinon, nous somme en ajout donc pas d'image -->
+				</div>
+				<div class="flex-column w-70">
+					<div class="m-1 ">
+						<h3 class="h3">
+							<label for="titre_product">
+								Titre
+								<span class="textDetails">Entrer le nom de votre produit</span>
+							</label>
+
+						</h3>
+						{{form_widget(form.title)}}
+					</div>
+					<div class="m-1 ">
+						<h3 class="h3">
+							<label for="produit_description">
+								Texte
+								<span class="textDetails">Donnez ici une information sur le producteur</span>
+							</label>
+						</h3>
+						{{form_widget(form.text, {'attr' : {'class':'w-100'}})}}
+					</div>
+				</div>
+			</div>
+			<div class="m-1 m-2-left">
+				<h3 class="h3">
+					<label for="description_produit">
+						Description
+						<span class="textDetails">Décriver ici le produit</span>
+					</label>
+				</h3>
+				{{form_widget(form.description, {'attr' : {'class':'w-100'}})}}
+			</div>
+			<div class=" m-1 m-3-bottom flex">
+				<div class="m-1 ">
+					<h3 class="h3">
+						<label for="taille_produit">
+							Taille
+							<span class="textDetails"><br>Pour combien de personnes</span>
+						</label>
+					</h3>
+					{{form_widget(form.size)}}
+				</div>
+				<div class="m-1 w-10">
+					<h3 class="h3">
+						<label for="titre_presentation">
+							Prix (€)
+							<span class="textDetails"><br>Entrer le prix TTC</span>
+						</label>
+					</h3>
+					{{form_widget(form.price)}}
+				</div>
+				<div class="m-1 ">
+					<h3 class="h3">
+						<label for="titre_presentation">
+							Catégorie
+							<span class="textDetails"><br>Vous proposez un panier ou un produit ?</span>
+						</label>
+					</h3>
+					{{form_widget(form.category)}}
+				</div>
+				<div class="m-1 w-10">
+					<h3 class="h3">
+						<label for="titre_presentation">
+							Publié
+							<span class="textDetails"><br>Mise en ligne</span>
+						</label>
+					</h3>
+					{{form_widget(form.status, {'label':' '})}}
+				</div>
+			</div>
+		</article>
+	</section>
+	
+	<div class="flex-h-spacebetween m-2-top">
+		<div class="flex-center-h">
+			<a class="input btn alert-button" href="{{path('products')}}">Annuler</a><img src="{{asset('assets/information-alert_icon.svg') }}" alt="icon information" class="icon">
+		</div>
+		<div class="flex">
+			<!-- Test de l'action qui est entrain d'etre fait pour modifier le libellé du bouton de validation du formulaire -->
+			{% if  product.id != null %}
+				<input type="submit" value="Modifier" class="input btn sweet-button">
+			{% else %}
+				<input type="submit" value="Ajouter" class="input btn sweet-button">
+			{% endif %}
+			<!-- Fin du test -->
+		</div>
+	</div>
+	{{form_end(form)}}
+{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+            <script type="text/javascript" src="{{asset('js/navbo.js')}}"></script>
+        {% endblock %}

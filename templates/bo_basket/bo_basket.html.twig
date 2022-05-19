@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/boProducts.css') }}" rel="stylesheet">
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+	HO | Corbeille
+{% endblock %}
+
+{% block body %}
+	<!-- Message stocké, afficher en fonction de l'action effectué -->
+	{% for message in app.flashes('success') %}
+		<h2 class="alert-message">{{message}}</h2>
+		<hr><br>
+	{% endfor %}
+	<nav class="nav-product">
+		<div class="nav-flex">
+			{% block myTitle %}Corbeille{% endblock %}
+			
+		</div> 
+		<div class="btn-right">
+			<button class="btn-info" type="button"><span><img src="{{asset('assets/information_icon.svg') }}" alt="icône information"></span>
+			</button>
+
+		</div>
+	</nav>
+	<section class="products">
+		{% if products == null %}
+			<h2>La Corbeille est vide</h2>
+			{% endif %}
+		{% for product in products %}
+		<article>
+			
+				<div class="inline-product">
+					<div class="card-image">
+						<img src="{{asset('upload/products/' ~ product.picture)}}" alt="image {{product.title}}"/>
+						<p class="btn-product">{{product.category.name}}</p>
+					</div>
+					<div class="card-body">
+						<h2>{{product.title}}</h2>
+						<p>{{product.price}}
+							&euro;</p>
+							<img src="{{asset('assets/offline_icon.svg') }}" alt="icône hors ligne">
+						<div class="btn-card">
+							<form method="POST" action="{{path('productOn', {'id' :product.id})}}">
+								<input type="hidden" name="_method" value="on">
+								<input type="hidden" name="_token" value="{{csrf_token('ON' ~ product.id)}}">
+								<input class="deleteInput" type="submit" value="Reinitialiser">
+							</form>
+						</div>
+						<div class="btn-card">
+							<form method="POST" action="{{path('products_delete', {'id' :product.id})}}">
+								<input type="hidden" name="_method" value="delete">
+								<input type="hidden" name="_token" value="{{csrf_token('SUP' ~ product.id)}}">
+								<input class="deleteInput" type="submit" value="Supprimer">
+							</form>
+						</div>
+					</div>
+				</div>	
+			</article>
+		{% endfor %}
+	
+	</section>
+</section>
+{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+            <script type="text/javascript" src="{{asset('js/navbo.js')}}"></script>
+        {% endblock %}

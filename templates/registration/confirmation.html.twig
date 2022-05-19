@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+{% block title %}Bienvenue !{% endblock %}
+
+{% block body %}
+<main>
+        <div class="content">
+            <div class="welcome">
+                <h1 class="h1-green">Bienvenue !</h1>
+                <div class="password-column">
+                    <h2>On y est presque...</h2>
+                </div>
+                <div class="send-email">
+                    <p>Vous avez reçu un mail de confirmation à votre adresse mail</p>
+                    <p>Pour activer ce compte merci de cliquer sur le lien qui vous a été envoyé !</p>
+                </div>
+                <div class="m-2-top" style="cursor:pointer"><a href="https://mailtrap.io/inboxes/1593912/messages/2567130376" class="btn border-button textButton" >activer</a><div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+

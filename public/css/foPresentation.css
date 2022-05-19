@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+/* GLOBAL */
+body {
+  background-color: #f1f8e6;
+}
+p {
+  line-height: 1.3em;
+  font-size: 1em;
+}
+h1 {
+  font-size: 2em;
+  padding: 100px 10px 50px 0;
+  font-weight: 600;
+}
+h2 {
+  font-size: 1.5em;
+  padding-bottom: 40px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.3em;
+  padding: 30px 0 30px 0;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.1em;
+  padding: 10px 0 10px 0;
+  font-weight: 600;
+}
+
+.block-cards {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+.container-cards {
+  padding: 100px 0 50px 0;
+}
+.cards {
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  margin: 10px;
+}
+.img-cards {
+  width: 230px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/* PRESENTATION AMAP */
+
+.p-description {
+  line-height: 1.5em;
+  font-size: 0.9em;
+}
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content-flexend {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 110px;
+}
+.description {
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product {
+  width: 90vw;
+  display: flex;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px !important;
+}
+
+.img-product {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* VALEURS */
+
+.container-values {
+  padding: 80px 0 100px 0;
+}
+.img-card {
+  width: 40%;
+  overflow: hidden;
+}
+.block-cards-values {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* PRODUCTEURS */
+.container-cards-producers {
+  background-color: #ffffff;
+  padding: 100px 0 100px 0;
+}
+.card {
+  background-color: #ffffff;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 25px 35px 25px 35px;
+  margin-right: 20px;
+}
+.content-card {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  padding-bottom: 70px;
+}
+
+/* CLIK AMAP */
+
+.inscription-text {
+  margin: 30px;
+}
+.container-amap {
+  width: 100%;
+  background-color: white;
+  padding: 100px 0 50px 0;
+  display: flex;
+}
+
+.container-logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-inscription {
+  margin-top: 50px;
+  border: none;
+  border-radius: 30px;
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #5d4037 no-repeat padding-box;
+  opacity: 1;
+  text-align: center;
+}
+
+.btn a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  h1
+  {
+    padding-top: 20px;}
+.product{
+  flex-direction: column;
+}
+  .card{
+margin: 0 auto;
+margin-bottom: 20px;
+  }
+
+  .block-cards {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .block-cards-values {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .container-cards-producers{
+    padding: 50px 0 50px 0;
+  }
+.container-values{
+  padding: 40px 0 20px 0;
+}
+.container-cards{
+  padding: 50px 0 25px 0;
+}
+  .cards {
+    margin: 50px 0 50px 0;
+    margin: 0 auto;
+  }
+
+  .container-amap{
+    padding: 50px 0 25px 0;
+    flex-direction: column;
+  }
+
+  .container-amap{
+    flex-direction: column;
+  }
+
+  .btn{
+    padding-top: 30px;
+  }
+  .btn-inscription{
+    margin:0 auto;
+  }
+
+  
+}
+
+@media (max-width: 991.98px) {
+  .block-cards{
+    flex-wrap: wrap;
+  }
+  .block-cards-values{
+    flex-wrap: wrap;
+  }
+
+      }
+  .card{
+    max-width: 250px;
+    margin-top:20px   
+}
+
+@media (max-width: 1199.98px) {
+  .block-cards{
+    flex-wrap: wrap;
+  }
+  .block-cards-values{
+    flex-wrap: wrap;
+  }
+
+  .card{
+    max-width: 250px;
+   }
+}

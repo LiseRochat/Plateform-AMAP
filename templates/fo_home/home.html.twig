@@ -1,0 +1,48 @@
+{% extends 'baseFO.html.twig' %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/foHome.css')}}">
+{% endblock %}
+
+{% block title %}AMAP |Bienvenue sur l'AMAP {% endblock %}
+
+    {% block body %}
+    <!-- CATCH PHRASE -->
+
+              <div class="catch-phrase"> 
+        <div class="conteneur">
+                  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore facere quo unde assumenda ipsum similique.</h1>
+                    <a class="btn-discover">Découvrir</a>
+                </div>
+            </div>
+
+          <!--BLOC PRESENTATION-->
+            <section>
+
+            <!-- PRODUCT -->
+              <article>
+                  <img src="{{asset('picture/panier.jpg')}}" alt="image panier"/>
+                  <h2>Nos produits</h2>
+                  <p>Découvrez les produits de votre région<br>et soutenez vos agriculteurs</p>
+                  <a class="button" href="{{path('fo_presentation')}}">Voir les produits</a>
+              </article>
+
+      <!-- PRODUCERS -->
+              <article>
+                  <img src="{{asset('picture/producteur.jpg')}}" alt="image producteur"/>
+                  <h2>Nos producteurs</h2>
+                  <p>Découvrez les producteurs de<br>votre région !</p>
+                  <a class="button" href="{{path('fo_presentation')}}">Voir les producteurs</a>
+              </article>
+
+      <!-- VOLUNTEERS -->
+              <article>
+                  <img src="{{asset('picture/amap.jpg')}}" alt="image bénévoles"/>
+                  <h2>L'AMAP</h2>
+                  <p>Découvrez L'AMAP et son<br>organisation</p>
+                  <a class="button" href="{{path('fo_presentation')}}">Voir l'amap</a> 
+              </article>
+          </section>
+          {% endblock %}
+
+

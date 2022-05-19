@@ -1,0 +1,40 @@
+<header>
+      <div class="logo">
+        <a href="{{path('fo_home')}}">
+          <img
+            class="logo"
+            src="{{asset('assets/logo-theme1_icon.svg')}}"
+            alt="logo"
+            title="Happy Oignons"
+          />
+        </a>
+      </div>
+      <a href="#" id="hamburger-trigger">☰</a>
+      <nav class="navbarNAV">
+        
+
+        <div class="primary-navNAV">
+
+          <ul>
+            <li class="nav-btnNAV"><a href="{{path('fo_home')}}">Accueil</a></li>
+            <li class="nav-btnNAV"><a href="{{path('fo_product')}}">Les produits</a></li>
+            <li class="nav-btnNAV"><a href="{{path('fo_presentation')}}">L'AMAP</a></li>
+            <li class="nav-btnNAV"><a href="{{path('fo_map')}}">Nous trouver</a></li>
+            <li class="nav-btnNAV"><a href="{{path('fo_contact')}}">Nous contacter</a></li>
+          </ul>
+
+          <div class="logNAV">
+            <a class="btn-inscriptionNAV" href="{{path('fo_inscription')}}">
+              Inscription
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script type="text/javascript" src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/scriptsFoNav.js')}}"></script>
+
+
+
+

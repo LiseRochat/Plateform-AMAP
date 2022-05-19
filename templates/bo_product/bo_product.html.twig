@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/boProducts.css') }}" rel="stylesheet">
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+	HO | Les Produits
+{% endblock %}
+
+{% block body %}
+	<!-- Message stocké, afficher en fonction de l'action effectué -->
+	{% for message in app.flashes('success') %}
+		<h2 class="alert-message">{{message}}</h2>
+		<hr><br>
+	{% endfor %}
+	<nav class="nav-product">
+		<div class="nav-flex">
+			{% block myTitle %}Produits{% endblock %}
+			<a href="{{path("products")}}"><img src="{{asset('assets/search_icon.svg') }}" alt="icône de recherche"></a>
+			 <a class=" btn btn-product-cart txtButton" href="{{path("productByCategory",{"category":
+			2})}}"> Panier</a>
+			<a class=" btn btn-product-cart txtButton" href="{{path("productByCategory",{"category":
+			1})}}"> Produit</a>
+			
+			<!-- Lien permettant d'affiche les produits en fonction de leurs status -->
+			<!-- Produit en Ligne -->
+			 <a class=" btn btn-online txtButton" href="{{path("productByStatus",{"status":
+			1})}}">
+				<img src="{{asset('assets/online_icon.svg') }}" alt="icône en ligne"> En Ligne
+			</a>
+			<!-- Produit Hors Ligne -->
+			<a class=" btn btn-offline txtButton" href="{{path("productByStatus",{"status":
+			0})}}">
+				<img src="{{asset('assets/offline_icon.svg') }}" alt="icône en ligne"> 
+				Hors-Ligne
+			</a> 
+		</div> 
+		<div class="btn-right">
+			<button class="btn-info" type="button"><span><img src="{{asset('assets/information_icon.svg') }}" alt="icône information"></span>
+			</button>
+
+		</div>
+	</nav>
+
+	<section class="products">
+	<article class="product-article">
+		<div class="card-add-product">
+			<a href="{{path('products_create')}}">
+				<h3>+
+					<br>
+					Ajouter un produit
+				</h3>
+			</a>
+		</div>
+	</article>
+		{% for product in products %}
+		<article class="product-article">
+				<div class="inline-product">
+					<div class="card-image">
+						<img src="{{asset('upload/products/' ~ product.picture)}}" alt="image {{product.title}}"/>
+						<p class="btn-product">{{product.category.name}}</p>
+					</div>
+					<div class="card-body">
+						<h2>{{product.title}}</h2>
+						<p>{{product.price}}
+							&euro;</p>
+						<!-- Test si produit publié -->
+						{% if product.status == TRUE %}
+							<div class="inline">
+								<img src="{{asset('assets/online_icon.svg') }}" alt="icône en ligne">
+								<p>en ligne</p>
+							</div>
+						{% else %}
+							<div class="inline">
+								<img src="{{asset('assets/offline_icon.svg') }}" alt="icône hors ligne">
+								<p>hors ligne</p>
+							</div>
+						{% endif %}
+						<!-- Fin Test si produit publié -->
+						<div class="btn-card">
+							{% if product.status == TRUE %}
+								<a class="btn border-button-alert" href="{{path('products_publication', {'id' :product.id})}}">Depublier</a>
+							{% else %}
+								<a class=" btn sweet-button border-button" href="{{path('products_publication', {'id' :product.id})}}">Publier</a>
+							{% endif %}
+							<a class=" btn border-button " href="{{path('products_modification', {'id' :product.id})}}">Modifier</a>
+							{% if product.basket == FALSE %}
+							<a class="btn border-button-alert" href="{{path("productByBasket",{"id":product.id})}}">Corbeille</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>	
+			</article>
+		{% endfor %}
+	
+	</section>
+</section>
+{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+            <script type="text/javascript" src="{{asset('js/navbo.js')}}"></script>
+        {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'baseFO.html.twig' %}
+{% block stylesheet %}
+{{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/foInscription.css')}}">
+{% endblock %}
+
+{% block title %}AMAP | 404{% endblock %}
+
+{% block body %}
+
+    <div class="center-title" style="height:100vh; padding-top:100px;">
+        <h1 class="titre1 txt-center">Oups..!</h1>
+        <p class="p">Cette page n'existe pas ! vous pouvez retourner sur l'accueil <a class="h2" href="{{path('fo_home')}}">ici</a></p>
+        {# <iframe src="https://giphy.com/embed/fUM82jmXDcWauFUkPp" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> #}
+        <img src="{{asset('assets/error.gif') }}" width="auto" height="200">
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'baseFO.html.twig' %}
+{% block stylesheet %}
+{{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/foProductSheet.css')}}">
+{% endblock %}
+
+{% block title %}AMAP | Fiche produit{% endblock %}
+
+{% block body %}
+
+    <div class="ariane">
+     <div id="home">
+         <a href="#">Les produits</a><img src="{{asset('assets/ariane-theme1_icon.svg')}}" alt="fil ariane"><a href="#">Confiture de saison</a>
+     </div>
+    </div>
+     <!--PRODUCT DESCRIPTION-->
+     <section class="products">
+         <article class="product">
+             <img class="img-product" src="{{asset('upload/products/' ~ product.picture)}}" alt="">
+             <div class="description">
+                 <h1>{{product.title}}</h1>
+                 <div class="description-product">
+                    <br><p>Producteur</p><br>
+                     <p>{{product.text}}</p>
+                 </div>
+                 <div class="description-product">
+                    <br><p>Description</p><br>
+                     <p>{{product.description}}</p>
+                 </div>
+                 <div class="content-flexend">
+                     <div class="content-price">
+                         <p><span>{{product.price}}</span></p>
+                     </div>
+                     <div class="btn-inscription">
+                         <button class="button" type="button">Inscription</button>
+                     </div>
+                 </div>
+             </div>
+         </article>
+     </section>
+
+     <!--CARDS-->
+     
+     <div class="other-card">
+         <h2>Autre chose :</h2>
+            {% for cart in carts %}
+            {% if cart.status == TRUE %}
+            <article class="card">
+                <img class="img-card" src="{{asset('upload/products/' ~ cart.picture)}}" alt="{{cart.title}}">
+                <h3>{{cart.title}}</h3>
+                <p>{{cart.text}}</p>
+                <a class="btn-article" href="{{ path('fo_product_sheet', { 'id' : cart.id }) }}">Voir l'article<a/>
+            </article>
+            {% endif %}
+            {% endfor %}
+     </div>
+
+{% endblock %}

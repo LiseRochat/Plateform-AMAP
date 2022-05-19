@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+{% block title %}Ho | 404{% endblock %}
+
+{% block body %}
+<main>
+        <div class="content">
+            <div class="welcome">
+                <h1 class="h1-green">Oups...</h1>
+                <div class="password-column">
+                    <h2>Cette page n'existe pas !</h2>
+                </div>
+                <div class="send-email">
+                    <p>Vous pouvez revenir à votre tableau de bord <a href="{{ path('bo_dashboard') }}" class="btn border-button textButton" >ici</a></p>
+                </div>
+                        <img src="{{asset('assets/error.gif') }}" width="auto" height="200">
+
+            </div>
+        </div>
+    </main>
+{% endblock %}
+

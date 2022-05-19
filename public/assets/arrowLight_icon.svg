@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-arrowLight_icon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="arrowLight_icon" clip-path="url(#clip-arrowLight_icon)">
+    <rect id="Rectangle_494" data-name="Rectangle 494" width="24" height="24" fill="none"/>
+    <g id="arrow_forward_black_24dp" transform="translate(24 24) rotate(180)">
+      <path id="Tracé_246" data-name="Tracé 246" d="M0,0H24V24H0Z" transform="translate(0)" fill="none"/>
+    </g>
+    <path id="Tracé_415" data-name="Tracé 415" d="M11.793,4,10.42,5.374l5.436,5.445H4v1.948H15.855L10.42,18.213l1.374,1.374,7.793-7.793Z" transform="translate(0.207 0.207)" fill="#fff"/>
+  </g>
+</svg>

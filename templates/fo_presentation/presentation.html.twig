@@ -1,0 +1,174 @@
+{% extends 'baseFO.html.twig' %}
+{% block stylesheet %}
+        {{ parent() }}
+
+    <link rel="stylesheet" href="{{asset('css/foPresentation.css')}}">
+{% endblock %}
+{% block title %}AMAP | Présentation{% endblock %}
+
+{% block body %}
+    <!-- Présentation de l'AMAPS -->
+    <section class="products">
+        <article class="product">
+            <img class="img-product" src="{{asset('picture/home.png')}}" alt="image amap">
+            <div class="description">
+                <h1>Hello</h1>
+                <div class="description-product">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates obcaecati doloribus
+                        numquam modi sint aspernatur dolorem sunt quas nisi quod fugiat blanditiis quam sequi
+                        explicabo voluptatibus ut?
+                        Perferendis velit provident, fugit aliquam quod recusandae ex ut! Officiis officia alias
+                        odio laudantium dolorum quaerat eveniet optio reiciendis voluptas adipisci iure maxime aut
+                        culpa iste nesciunt, molestiae maiores obcaecati!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque optio, earum natus iure quam
+                        quos illum eius ipsam maiores, quibusdam dolores, voluptatibus ab amet assumenda autem
+                        accusantium perspiciatis quo velit?</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Les valeurs  -->
+    <section class="container-values">
+        <div class="content">
+            <h2>Nos valeurs</h2>
+            <!-- n Card pour n producteurs -->
+            <div class="block-cards-values">
+                <article class="card">
+                    <img class="img-card" src="{{asset('assets/valeur1_illu.svg')}}" alt="logo securite">
+                    <h3>Une sécurité</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, sequi?
+                    </p>
+                </article>
+                <article class="card">
+                    <img class="img-card" src="{{asset('assets/valeur2_illu.svg')}}" alt="logo securite">
+                    <h3>Recréer le lien avec la nature</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, sequi?
+                    </p>
+                </article>
+                <article class="card">
+                    <img class="img-card" src="{{asset('assets/valeur3_illu.svg')}}" alt="logo securite">
+                    <h3>Soutenir les agriculteurs</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, sequi?
+                    </p>
+                </article>
+                <article class="card">
+                    <img class="img-card" src="{{asset('assets/valeur4_illu.svg')}}" alt="logo securite">
+                    <h3>Des produits de qualité</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, sequi?
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les producteurs  -->
+    <section class="container-cards-producers">
+        <div class="content">
+                <h2>Nos producteurs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, aliquam quasi sit alias
+                    fugiat
+                    ex
+                    necessitatibus neque, molestiae doloremque facilis nihil vero ipsum explicabo. Quod hic,
+                    recusandae
+                    minus modi quis libero saepe eligendi quo non quia rem ad assumenda molestias dicta tempore
+                    obcaecati
+                    cupiditate veniam distinctio magnam blanditiis iste amet?</p>
+          
+            <!-- n Card pour n producteurs -->
+            <div class="block-cards">
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/producteur.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/producteur.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/producteur.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/producteur.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les bénévoles  -->
+    <section class="container-cards">
+        <div class="content">
+                <h2>Nos bénévoles</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, aliquam quasi sit alias
+                    fugiat
+                    ex
+                    necessitatibus neque, molestiae doloremque facilis nihil vero ipsum explicabo. Quod hic,
+                    recusandae
+                    minus modi quis libero saepe eligendi quo non quia rem ad assumenda molestias dicta tempore
+                    obcaecati
+                    cupiditate veniam distinctio magnam blanditiis iste amet?</p>
+            <!-- n Card pour n producteurs -->
+            <div class="block-cards">
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/benevole.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/benevole.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/benevole.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+                <article class="cards">
+                    <img class="img-cards" src="{{asset('picture/benevole.png')}}"
+                        alt="photo de {nom prenom du producteur}">
+                    <h4><strong>Nom Prenom</strong></h4>
+                    <p>Metiers</p>
+                    <p>Lieux</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Clic Amap -->
+    <section class="container-amap">
+        <div class="content">
+            <h2>Clic Amap</h2>
+        <div class="container-logo">
+            <a href="https://amap-aura.org/"><img class="img-logo" src="{{asset('picture/clicAmap.png')}}" alt="logo amap aura"></a>
+            <div class="inscription-text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo modi labore earum porro nihil
+                    praesentium aliquid beatae nemo eum tempore! Reiciendis architecto quos numquam non autem ullam
+                    provident tempora velit.</p>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="btn-inscription" href="#" type="button"> <a href="#">S'inscrire</a></button>
+        </div>
+    </div>
+    </section>
+{% endblock %}

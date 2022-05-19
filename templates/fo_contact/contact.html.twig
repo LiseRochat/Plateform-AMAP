@@ -1,0 +1,75 @@
+{% extends 'baseFO.html.twig' %}
+{% block stylesheet %}
+{{ parent() }}
+    <link rel="stylesheet" href="{{asset('css/foContact.css')}}">
+{% endblock %}
+{% block title %}AMAP | Contact{% endblock %}
+
+{% block body %}
+
+    <section id="banniere">
+        <div class="banner">
+            <h2>Discutons !</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ratione reprehenderit animi corporis
+                aliquid distinctio ab iusto laborum odit. Praesentium amet molestiae dicta quasi, at temporibus libero
+                perferendis adipisci iusto! Totam labore similique quos cupiditate? Unde accusamus praesentium at nobis
+                temporibus eos sapiente iure magni, asperiores facilis autem quae mollitia facere accusantium excepturi
+                saepe vitae voluptates, quas perspiciatis officia reiciendis. Quia quidem obcaecati minima, qui eaque
+                sit a modi ratione nesciunt amet ad non quis in quisquam, aut fugit optio. Modi iure corrupti qui
+                debitis reiciendis labore molestias! Amet eligendi quia iusto quae dicta voluptate neque ullam atque
+                quaerat modi?</p>
+            <div class="btn">
+                <input class="btn-submit" type="submit" value="Inscription" autofocus>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="title">
+            <h1>Une question ?</h1>
+            <p>Contactez-nous</p>
+        </div>
+
+        <div class="form">
+
+            <div class="subtitle">
+                <div class="circle">1</div>
+                <h3>Informations générales</h3>
+            </div>
+
+            <form class="formulaire" name="contact" method="post" action="">
+                <div class="registration">
+                    <div class="identity-display-flex">
+                        <div class="form-column">
+                        <label>Nom</label>
+                        <input class="input-form" type="text" name="surname" id="lastname" placeholder="nom" required>
+                        </div>
+                        <div class="form-column">
+                        <label>Prénom</label>
+                        <input class="input-form" type="text" name="name" placeholder="prenom" required>
+                        </div>
+                    </div>
+                    <div class="form-column">
+                    <label>Adresse mail</label>
+                    <input class="input-form" type="email" name="email" placeholder="email@email.email" required>
+                    </div>
+                    <div class="form-column">
+                    <label>Objet</label>
+                    <select name="objet" required>
+                        <option>Questions sur l'abonnement</option>
+                        <option>Questions sur le fonctionnement</option>
+                        <option>Problème liée au site web</option>
+                    </select>
+                    </div>
+
+                    <div class="form-column">
+                    <label>Message</label>
+                    <textarea row=1000 cols=50 placeholder="votre message" required></textarea>
+                    </div>
+                </div>
+                <div class="btn">
+                <input class="btn-submit" type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}

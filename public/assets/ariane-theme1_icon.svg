@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-ariane-theme1_icon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="ariane-theme1_icon" clip-path="url(#clip-ariane-theme1_icon)">
+    <rect id="Rectangle_494" data-name="Rectangle 494" width="24" height="24" fill="none"/>
+    <path id="Tracé_408" data-name="Tracé 408" d="M16.137,8.59l-4.394,4.384L7.35,8.59,6,9.94l5.744,5.744L17.487,9.94Z" transform="translate(0.815 24.244) rotate(-90)" fill="#5d4037"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-littletrash_icon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="littletrash_icon" clip-path="url(#clip-littletrash_icon)">
+    <g id="delete_black_24dp">
+      <path id="Tracé_122" data-name="Tracé 122" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Tracé_123" data-name="Tracé 123" d="M16,9V19H8V9h8M14.5,3h-5l-1,1H5V6H19V4H15.5ZM18,7H6V19a2.006,2.006,0,0,0,2,2h8a2.006,2.006,0,0,0,2-2Z" fill="#222627"/>
+    </g>
+  </g>
+</svg>

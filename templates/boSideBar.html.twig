@@ -1,0 +1,36 @@
+
+{% block stylesheet %}
+    <link href="{{asset('css/backoffice.css') }}" rel="stylesheet"> 
+{% endblock %}
+
+	<aside class="sideBar-bg">
+		<nav class="sideBar-content flex-v-spacebetween">
+			<ul class="">
+				<li>
+					<a href="{{path('bo_dashboard')}}" class="sideBar-buttons p-1 textLink-light">
+						<img src="{{asset('assets/dashboard_icon.svg') }}" alt="icone dashboard">
+						Dashboard
+					</a>
+				</li>
+				<li>
+					<a href="{{path('bo_pages')}}" class="sideBar-buttons p-1 textLink-light">
+						<img src="{{asset('assets/page_icon.svg') }}" alt="icon page">
+						Pages
+					</a>
+				</li>
+				<li>
+					<a href="{{path('products')}}" class="sideBar-buttons p-1 textLink-light">
+						<img src="{{asset('assets/products_icon.svg') }}" alt="icone produit">
+						Produits
+					</a>
+				</li>
+				<li>
+					<a href="{{path('bo_basket')}}" class="sideBar-buttons p-1 textLink-light">
+						<img src="{{asset('assets/trash_icon.svg') }}" alt="icone corbeille ">
+						Corbeille
+					</a>
+				</li>
+			</ul>
+			<button class="btn sweet-button m-1-v">inviter un admin</button>
+		</nav>
+	</aside>

@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f1f8e6;
+  flex-direction: column;
+}
+
+#banniere {
+  background-color: white;
+  display: flex;
+  margin-top: 30px;
+  padding: 100px 0 20px 80px;
+}
+
+h1 {
+  color: #222627;
+  font-size: 2em;
+  padding-bottom: 30px;
+}
+
+#banniere p {
+  margin-bottom: 30px;
+  display: flex;
+  width: 95%;
+  line-height: 1.3em;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-products {
+  border: none;
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #5d4037 no-repeat padding-box;
+  opacity: 1;
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  padding-top: 10px;
+}
+
+/* ------------------ CARDS -------------------- */
+.carts {
+  display: flex;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 50px 0 30px 50px;
+}
+h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 30px 0 30px 0;
+}
+
+.inscription-block h3 {
+  padding: 5px 0 5px 0;
+}
+
+section {
+  width: 100%;
+  display: flex;
+}
+
+.card {
+  background-color: #ffffff;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  margin: 0 auto;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+.img-card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  height: 200px;
+}
+
+.other-card {
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content-card {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  padding-bottom: 70px;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 200px;
+}
+
+.btn-discover1{
+  border-radius: 23px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #5d4037;
+  text-align: center;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.btn-inscription {
+  border-radius: 23px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #5d4037;
+  text-align: center;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.btn-article {
+  border-radius: 23px;
+  color: #5d4037;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  text-align: center;
+  border: 1px solid #5d4037;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+a:link{
+  text-decoration: none;
+}
+
+.card p {
+  padding: 0 20px 40px 20px;
+
+}
+
+
+/* -------------- CARDS PRODUCTS ------------*/
+
+.product-list {
+  width: 100%;
+  border: black solid 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#searchbar {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+}
+.searchbar {
+  align-items: center;
+}
+
+.product-title{
+  padding: 0 50px 0 50px;
+}
+::placeholder {
+  font-style: italic;
+  padding-left: 5px;
+}
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-card {
+  flex-wrap: wrap;
+}
+
+/*--------------------- HOW IT WORK ------------------------*/
+
+.inscription {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.inscription-Title {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.inscription-Title p {
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.inscription-block {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+
+.block {
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card img {
+  margin-bottom: 10px;
+}
+
+.block p {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.how-work {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px 0 20px 0;
+}
+
+.img-abo {
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  #banniere {
+    padding: 50px 0 20px 30px;
+  }
+
+  .content-card {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .card {
+    width: auto;
+    margin-bottom: 30px;
+  }
+
+  #searchbar {
+    height: 20px;
+    margin-top: 25px;
+    margin-left: 0;
+    width: 155px;
+  }
+.product-title{
+  padding: 50px 0 5px 0;
+}
+  .btn {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .inscription-block {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .search-flex {
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  h2{
+    font-size: 1.7em;
+    text-align: center;
+    padding: 50px 0 30px 0;
+  }
+h1{
+  font-size: 2em;
+  font-weight: 600;
+}
+}
+
+@media (max-width: 991.98px){
+  .card p {
+    padding: 0 10px 20px 10px;
+  }
+  h3 {
+    font-size: 1.3em;
+    padding: 20px 0 20px 0;
+
+  }
+  .search-flex {
+    margin-top: 30px;
+  }
+}

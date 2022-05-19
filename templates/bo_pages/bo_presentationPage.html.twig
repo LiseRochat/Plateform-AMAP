@@ -1,0 +1,559 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/boProducts.css') }}" rel="stylesheet">
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+	HO | Page Presentation
+{% endblock %}
+{% block body %}
+	<section class="flex-center-h m-1-bottom">
+		<p class="arianeText">Pages | </p>
+		<h1 class="h1-geen">
+			Page Presentation
+		</h1>
+	</section>
+	<!-- début formulaire -->
+	
+		
+	
+	<form method="post" name="amapPresentation" enctype="multipart/form-data">
+		<section
+			class="page-content  p-2">
+			<!-- module presentation amap -->
+			<article class=" m-1-b m-3-bottom">
+				<div class="flex-center-h">
+					<div class="circle h2">1</div>
+					<h2 class="h2 flex-center-h">Présentation de l'AMAP
+					</h2>
+					<button style="cursor: pointer;" id="button-page-accueil-seo"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information" class="icon"></button>
+				</div>
+				{{form_start(formAmap)}}
+				<div class="flex m-2-left">
+					<div class="m-1 w-30">
+						<h3 class="h3">
+							<label for="image_presentation">
+								Image
+							</label>
+						</h3>
+						<div class="input-custom image-box-presentation">
+							<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download " style="cursor:pointer"/>
+							{{form_widget(formAmap.picture)}}
+						</div>
+					</div>
+					<div class="flex-column w-70">
+						<div class="m-1 ">
+							<h3 class="h3">
+								<label for="titre_presentation">
+									Titre
+								</label>
+							</h3>
+							{{form_widget(formAmap.title)}}
+						</div>
+						<div class="m-1 ">
+							<h3 class="h3">
+								<label for="titre_presentation">
+									Texte
+									<span class="textDetails"></span>
+								</label>
+							</h3>
+							{{form_widget(formAmap.text,{'attr' : {'class':'w-100'}})}}
+						</div>
+					</div>
+				</div>
+				<div><input class="btn sweet-button p-05" type="submit" value="Valider"></div>
+			</article>
+			{{form_end(formAmap)}}
+
+			<!-- module valeurs -->
+			<article class="m-3-bottom">
+				<div class="flex-center-h">
+					<div class="circle h2">2</div>
+					<h2 class="h2 flex-center-h">Nos Valeurs
+					</h2>
+					<button style="cursor: pointer;" id="openpopup-page-accueil-header"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information" class="icon"></button>
+				</div>
+				<!-- titre -->
+				<div class="m-2-left">
+					<div class="m-1">
+						<h3 class="h3">
+							<label for="amapValuesTitle">
+								Titre
+							</label>
+						</h3>
+						<input type="text" name="amapValuesTitle" required>
+					</div>
+
+
+					<!-- module blocs -->
+					<div
+						class=" flex-h-spacearround m-2-v m-1 w-100">
+						<!-- bloc1 -->
+						<div class="w-30">
+							<span class="h3">Bloc 1</span>
+							<div class="b-1 p-05 m-1-right">
+								<div class="input-custom">
+									<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+									<input type="file" id="bloc1_image" name="background_image" placeholder="importer une image">
+								</div>
+								<h3 class="h3">
+									<label for="description_seo">
+										Texte
+									</label>
+								</h3>
+								<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								<button class="btn sweet-button p-05 m-1-top">Valider</button>
+							</div>
+						</div>
+						<!-- bloc2 -->
+						<div class="w-30">
+							<span class="h3">Bloc 2</span>
+							<div class="b-1 p-05  m-1-right">
+								<div class="input-custom">
+									<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+									<input type="file" id="bloc1_image" name="background_image" placeholder="importer une image">
+								</div>
+								<h3 class="h3">
+									<label for="description_seo">
+										Texte
+									</label>
+								</h3>
+								<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								<button class="btn sweet-button p-05 m-1-top">Valider</button>
+							</div>
+						</div>
+						<!-- bloc3 -->
+						<div class="w-30">
+							<span class="h3">Bloc 3</span>
+							<div class="b-1 p-05  m-1-right">
+								<div class="input-custom">
+									<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+									<input type="file" id="bloc1_image" name="background_image" placeholder="importer une image">
+								</div>
+								<h3 class="h3">
+									<label for="description_seo">
+										Texte
+									</label>
+								</h3>
+								<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								<button class="btn sweet-button p-05 m-1-top">Valider</button>
+							</div>
+						</div>
+					</div>
+				</article>
+
+
+				<!-- module acteurs 1-->
+				<article class="m-3-bottom">
+					<div class="flex-center-h">
+						<div class="circle h2">3</div>
+						<h2 class="h2 flex-center-h">Acteurs
+						</h2>
+						<button style="cursor: pointer;" id="openpopup-page-accueil-header"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information" class="icon"></button>
+					</div>
+					<!-- titre -->
+					<div class="m-2-left">
+						<div class="m-1">
+							<h3 class="h3">
+								<label for="amapActorsCategoryTitle">
+									Nom catégorie 1
+									<span class="textDetails">exemple : amapiens, producteurs, bénévoles...</span>
+								</label>
+							</h3>
+							<input type="text" name="amapActorsCategoryTitle" rows="3" class="w-100" required>
+						</div>
+						<div class="m-1">
+							<h3 class="h3">
+								<label for="amapActorsText">
+									Texte
+								</label>
+							</h3>
+							<textarea type="text" name="amapActorsText" rows="3" class="w-100" required></textarea>
+						</div>
+
+						<!-- module blocs -->
+						<div
+							class=" flex-h-spacearround m-2-v m-1 w-100">
+							<!-- bloc1 -->
+							<div class="w-30">
+								<span class="h3">Acteur 1</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc2 -->
+							<div class="w-30">
+								<span class="h3">Acteur 2</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc3 -->
+							<div class="w-30">
+								<span class="h3">Acteur 3</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc4 -->
+							<div class="w-30">
+								<span class="h3">Acteur 4</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc5 -->
+							<div class="w-30">
+								<span class="h3">Acteur 5</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+						</div>
+						<button class="btn sweet-button p-05 m-2-bottom m-1-left">Valider</button>
+
+						<!-- categorie2-->
+						<div class="m-1">
+							<h3 class="h3">
+								<label for="amapActorsCategoryTitle">
+									Nom catégorie 2
+									<span class="textDetails">exemple : amapiens, producteurs, bénévoles...</span>
+								</label>
+							</h3>
+							<input type="text" name="amapActorsCategoryTitle" rows="3" class="w-100" required>
+						</div>
+						<div class="m-1">
+							<h3 class="h3">
+								<label for="amapActorsText">
+									Texte
+								</label>
+							</h3>
+							<textarea type="text" name="amapActorsText" rows="3" class="w-100" required></textarea>
+						</div>
+
+						<!-- module blocs -->
+						<div
+							class=" flex-h-spacearround m-2-v m-1 w-100">
+							<!-- bloc1 -->
+							<div class="w-30">
+								<span class="h3">Acteur 1</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc2 -->
+							<div class="w-30">
+								<span class="h3">Acteur 2</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc3 -->
+							<div class="w-30">
+								<span class="h3">Acteur 3</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc4 -->
+							<div class="w-30">
+								<span class="h3">Acteur 4</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+							<!-- bloc5 -->
+							<div class="w-30">
+								<span class="h3">Acteur 5</span>
+								<div
+									class="b-1 p-05 m-1-right">
+									<!-- image acteur -->
+									<div class="input-custom">
+										<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+										<input type="file" id="bloc1_image" name="amapActorsBlocPicture" placeholder="importer une image">
+									</div>
+									<!-- nom de l'acteur -->
+									<div class="">
+										<h3 class="h3">
+											<label for="amapActorsBlocname">
+												Nom
+											</label>
+										</h3>
+										<input type="text" name="amapActorsBlocname" rows="3" class="w-100" required>
+									</div>
+									<!-- texte sur l'acteur -->
+									<h3 class="h3">
+										<label for="description_seo">
+											Texte
+										</label>
+									</h3>
+									<textarea name="amapValuesBlocText" rows="3" class="w-100" required></textarea>
+								</div>
+							</div>
+						</div>
+
+						<button class="btn sweet-button p-05 m-2-bottom m-1-left">Valider</button>
+					</div>
+				</article>
+
+
+				<!-- module réseau amap -->
+				<article class=" m-1-b m-3-bottom">
+					<div class="flex-center-h">
+						<div class="circle h2">4</div>
+						<h2 class="h2 flex-center-h">Présentation du réseau AMAP
+						</h2>
+						<button style="cursor: pointer;" id="button-page-accueil-seo"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information" class="icon"></button>
+					</div>
+					<div class="flex m-2-left">
+						<div class="m-1 w-30">
+							<h3 class="h3">
+								<label for="image_presentation">
+									Image
+								</label>
+							</h3>
+							<div class="input-custom image-box-presentation">
+								<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download " style="cursor:pointer"/>
+								<input type="file" name="amapNetwork" placeholder="importer une image" required>
+							</div>
+						</div>
+						<div class="flex-column w-70">
+							<div class="m-1 ">
+								<h3 class="h3">
+									<label for="titre_presentation">
+										Titre
+									</label>
+								</h3>
+								<input type="text" name="amapNetworkTitle" placeholder="entrer le titre de votre introduction à la page" required>
+							</div>
+							<div class="m-1 ">
+								<h3 class="h3">
+									<label for="titre_presentation">
+										Texte
+										<span class="textDetails"></span>
+									</label>
+								</h3>
+								<textarea name="amapNetworkDescription" id="description" cols="auto" rows="2" class="w-100 placeholder" placeholder="entrez ici la description de votre AMAP"></textarea>
+							</div>
+							<div class="m-1">
+								<h3>Bouton</h3>
+								<div class="b-1 p-05  flex">
+									<input type="text" id="title_button" name="title_button" placeholder="titre du bouton" class="w-50 m-1-right">
+
+									<div class="input-custom w-50">
+										<img src="{{asset('assets/link_icon.svg') }}" alt="icone lien" id="icon-url_page-accueil-header" class="icon-custom-link">
+										<input list="urls" name="url" id="url_page-accueil-header" placeholder="lien du bouton" type="url">
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<button class="btn sweet-button p-05">Valider</button>
+				</article>
+
+			</section>
+			<div class="flex-h-spacebetween m-2-top">
+				<div class="flex-center-h">
+					<a class="input btn alert-button" href="{{path('bo_pages')}}">Annuler</a>
+				</div>
+
+				<div class="flex">
+					
+					<input type="submit" value="Enregistrer" class="btn sweet-button">
+				</div>
+			</div>
+		</form>
+	{% endblock %}

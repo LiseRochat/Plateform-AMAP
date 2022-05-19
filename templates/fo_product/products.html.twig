@@ -1,0 +1,101 @@
+{% extends 'baseFO.html.twig' %}
+{% block stylesheet %} 
+{{ parent() }}
+   
+    <link rel="stylesheet" href="{{asset('css/foProducts.css')}}">
+{% endblock %}
+{% block title %}AMAP | Produits{% endblock %}
+
+{% block body %}
+
+
+    <!-- BANNIERE-->
+    <section id="banniere">
+        <div class="banner">
+           <h1> Découvrez nos produits</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, excepturi beatae
+                . Quas quisquam molestias eius, vero deserunt odio, labore dolores obcaecati sunt officia
+                maiores eaque esse! Natus nihil earum quod!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, excepturi beatae
+                . Quas quisquam molestias eius, vero deserunt odio, labore dolores obcaecati sunt officia
+                maiores eaque esse! Natus nihil earum quod!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, excepturi beatae
+                . Quas quisquam molestias eius, vero deserunt odio, labore dolores obcaecati sunt officia
+                maiores eaque esse! Natus nihil earum quod!</p>
+            <div class="btn">
+                <a class="btn-discover1 href="{{path('fo_product')}}"">Découvrir</a>
+            </div>  
+        </div>
+    </section>
+    <!-- FIN BANNIERE-->
+    <!-- CART -->
+<div class="carts">
+    <div class="other-card">
+        <h2>Nos paniers</h2>
+        <section class="content-card">
+            {% for cart in carts %}
+            {% if cart.status == TRUE %}
+            <article class="card">
+                <img class="img-card" src="{{asset('upload/products/' ~ cart.picture)}}" alt="{{cart.title}}">
+                <h3>{{cart.title}}</h3>
+                <p>{{cart.text}}</p>
+                <a class="btn-article" href="{{ path('fo_product_sheet', { 'id' : cart.id }) }}">Voir l'article</a>
+            </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+        <div class="btn">
+            <a class="btn-inscription" href="{{ path('fo_inscription') }}" >S'inscrire</a>
+        </div>
+   </div>
+</div>
+    <!-- PRODUCTS-->
+ {# <div class="search-flex"> #}
+        <h2>Nos produits</h2>
+        {# <input id="searchbar" onkeyup="search_products ()" type="text" name="search"
+        placeholder="Rechercher un produit">
+</div> pour v2 #}
+
+    <div class="carts">
+        <div class="other-card">
+    <section class="content-card">
+        {% for product in products %}
+        {% if product.status == TRUE %}
+        <article class="card">
+            <img class="img-card" src="{{asset('upload/products/' ~ product.picture)}}" alt="{{product.picture}}">
+            <h3>{{product.title}}</h3>
+            <p>{{product.text}}</p>
+            <a class="btn-article" href="{{ path('fo_product_sheet', { 'id' : product.id }) }}">Voir l'article</a>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </section>
+
+    <!-- INSCRIPTION-->
+<section class="inscription">
+    <div class="inscription-Title">
+        <p class="how-work">Comment ça marche ?</p>
+        <p>On vous explique à quoi sert l'abonnement !</p>
+    </div>
+    <div class="inscription-block">
+        <article class="card">
+            <img class="img-abo" src="{{asset('assets/etape1_illu.svg')}}" alt=" image abonnement">
+            <h3>L'abonnement</h3>
+            <br>
+            <p>L'abonnement ( 6mois ) minimum, donne l'accès à un panier ou moins par semaine</p>
+        </article>
+        <article class="card">
+            <img class="img-abo" src="{{asset('assets/etape2_illu.svg')}}" alt="image nos producteurs">
+            <h3>Nos producteurs</h3>
+            <br>
+            <p> Tous près de chez vous, ils peuvent grâce à l'abonnement se projeter sereinement les 6 prochains
+        </article>
+            <article class="card">
+                <img class="img-abo" src="{{asset('assets/etape3_illu.svg')}}" alt="image votre assiette">
+                <h3>Votre assiette</h3>
+                <br>
+                <p>Grâce à ce système en plus de soutenir les producteurs vous mangez local et de saison !</p>
+            </article>
+        </div>
+    </div>
+</section>
+</div>
+{% endblock %}

@@ -1,0 +1,251 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+	HO | Page Accueil
+{% endblock %}
+{% block body %}
+	<section class="flex-center-h m-1-bottom">
+		<p class="arianeText">Pages |</p>
+		<h1 class="h1-geen">
+			Page Accueil
+		</h1>
+	</section>
+	<form method="post">
+		<sectionclass="page-content  p-2">
+            <!-- ci-dessous les popup -->
+            {# <div class="modal-bg">
+                <div class="modal-content">
+                  <h1 class="h1-light">Vous modifiez actuellement ces éléments :</h1>
+                  <img src="{{asset('assets/page_accueil-aideseo.png') }}" alt="card-popup" class="card-popup">
+                  <a class="textLink-light link-icon"  href="{{ path('bo_pages_home')}}">Retourner sur la page <img src="{{asset('assets/close-light_icon.svg') }}"alt="close-icon" class="icon"></a>
+                </div>
+            </div> #}
+			<!-- popup 2 -->
+			{# <div class="modal-bg modal-bg2" id="openpopup-page-accueil-header">
+                <div class="modal-content">
+                  <h1 class="h1-light">Vous modifiez actuellement ces éléments :</h1>
+                  <img src="{{asset('assets/page_accueil-aideheader.png') }}" alt="card-popup" class="card-popup"src="assets-help/page_accueil-aideblocs.png">
+                  <a class="textLink-light link-icon"  href="{{ path('bo_pages_home')}}">Retourner sur la page <img src="{{asset('assets/close-light_icon.svg') }}"alt="close-icon" class="icon"></a>
+                </div>
+            </div> #}
+			<!-- popup 3 -->
+			<div class="modal-bg">
+                <div class="modal-content">
+                  <h1 class="h1-light">Vous modifiez actuellement ces éléments :</h1>
+                  <img src="{{asset('assets/page_accueil-aideblocs.png') }}" alt="card-popup" class="card-popup">
+                  <a class="textLink-light link-icon"  href="{{ path('page_modification',{'id':1} )}}">Retourner sur la page <img src="{{asset('assets/close-light_icon.svg') }}" alt="close-icon" class="icon"></a>
+                </div>
+            </div>
+            <!-- fin popup --> 
+
+			
+			<!-- module post -->
+			<article class=" m-1-b m-3-bottom">
+				<div class="flex-center-h">
+					<div class="circle h2">1</div>
+					<h2 class="h2 flex-center-h">SEO
+					</h2>
+					<button style="cursor: pointer;" id="button-page-accueil-seo"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information" class="icon"></button>
+				</div>
+				<div class="flex m-2-left">
+					<div class="m-1 w-50">
+					
+						<h3 class="h3">
+							<label for="title_seo">
+								Titre du site
+								<span class="textDetails">apparaît dans les résultats et l'onglet du navigateur</span>
+							</label>
+						</h3>
+						<input type="text" id="title_seo" name="title_seo" value="maximum 65 charactères">
+					</div>
+					<div class="m-1 w-50">
+						<h3 class="h3">
+							<label for="description_seo">
+								Description
+								<span class="textDetails">visible lors de la recherche du site dans les navigateurs</span>
+							</label>
+						</h3>
+						<input type="text" id="description_seo" name="description_seo" value="maximum 155 charactères">
+					</div>
+				</div>
+				<button class="btn sweet-button p-05">Valider</button>
+			</article>
+
+			<!-- module header -->
+			<article class="m-3-bottom">
+				<div class="flex-center-h">
+					<div class="circle h2">2</div>
+					<h2 class="h2 flex-center-h">Header
+					</h2>
+					<button style="cursor: pointer;" id="openpopup-page-accueil-header"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information" class="icon"></button>
+				</div>
+
+				<div class="m-2-left">
+					<div class="m-1">
+						<h3 class="h3">
+							<label for="title_catchphrase">
+								Phrase d'accroche
+								<span class="textDetails">entrer la phrase qui sera lue en premier dans votre site</span>
+							</label>
+						</h3 class="h3">
+						<input type="text" id="title_catchphrase" name="title_catchphrase">
+					</div>
+
+					<div class="flex m-1-left w-100">
+						<div class="m-1-right  w-30">
+							<h3 class="h3">
+								<label for="title_catchphrase">
+									Image de fond
+								</label>
+							</h3 class="h3">
+							<div class="input-custom">
+								<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+								<input type="file" id="background_image" name="background_image">
+							</div>
+
+
+						</div>
+						<div class="w-70 m-2-right">
+							<h3 class="h3">Bouton</h3>
+							<div class="b-1 p-05  flex">
+								<input type="text" id="title_button" name="title_button" placeholder="titre du bouton" class="w-50 m-1-right">
+
+								<div class="input-custom w-50">
+									<img src="{{asset('assets/link_icon.svg') }}" alt="icone lien" id="icon-url_page-accueil-header" class="icon-custom-link">
+									<input list="urls" name="url" id="url_page-accueil-header" placeholder="lien du bouton" type="url">
+									<datalist id="urls">
+										<option value="page accueil"></option>
+										<option value="page contact"></option>
+										<option value="page présentation"></option>
+										<option value="page lieu"></option>
+										<option value="page produits"></option>
+									</datalist>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<button class="btn sweet-button p-05">Valider</button>
+			</article>
+
+			<!-- module blocs -->
+			<article class=" m-1-b m-2-bottom">
+				<div class="flex-center-h">
+					<div class="circle h2">3</div>
+					<h2 class="h2 flex-center-h">Lot de blocs
+					</h2>
+					<button style="cursor: pointer;" id="openpopup-page-accueil-blocs"><img src="{{asset('assets/information-green_icon.svg') }}" alt="icon information" class="icon"></button>
+				</div>
+
+				<div
+					class=" flex-h-spacearround m-3-v">
+					<!-- bloc1 -->
+					<div class="b-1 p-05 w-30">
+						<div class="input-custom">
+							<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+							<input type="file" id="bloc1_image" name="background_image">
+						</div>
+
+						<h3 class="h3">
+							<label for="title_bloc">
+								Titre
+							</label>
+						</h3>
+						<input type="text" id="title_bloc" name="title_bloc">
+
+						<h3 class="h3">
+							<label for="description_seo">
+								Texte
+							</label>
+						</h3>
+						<input type="text" id="description_bloc1" name="description_bloc">
+
+						<div>
+							<h3 class="h3">Bouton</h3>
+							<div class="b-1 p-05  ">
+								<input type="text" id="bloc1_title_button" name="title_button" placeholder="titre du bouton" class="w-100 m-1-right m-1-bottom">
+
+								<div class="input-custom w-100">
+									<img src="{{asset('assets/link_icon.svg') }}" alt="icon lien" class="icon-custom-link">
+									<input list="urls" name="url" id="bloc1_url_page-accueil-header" placeholder="lien du bouton" type="url">
+									<datalist id="bloc1_urls">
+										<option value="page accueil"></option>
+										<option value="page contact"></option>
+										<option value="page présentation"></option>
+										<option value="page lieu"></option>
+										<option value="page produits"></option>
+									</datalist>
+								</div>
+							</div>
+						</div>
+						<button class="btn sweet-button p-05 m-1-top">Valider</button>
+					</div>
+
+
+					<!-- bloc1 -->
+					<div class="b-1 p-05 w-30">
+						<div class="input-custom">
+							<img src="{{asset('assets/export_icon.svg') }}" alt="icone importer" class="icon-custom-download" style="cursor:pointer"/>
+							<input type="file" id="bloc2_image" name="background_image">
+						</div>
+
+						<h3 class="h3">
+							<label for="title_bloc">
+								Titre
+							</label>
+						</h3>
+						<input type="text" id="title_bloc2" name="title_bloc">
+
+						<h3 class="h3">
+							<label for="description_seo">
+								Texte
+							</label>
+						</h3>
+						<input type="text" id="description_bloc2" name="description_bloc">
+
+						<div>
+							<h3 class="h3">Bouton</h3>
+							<div class="b-1 p-05 ">
+								<input type="text" id="bloc2_title_button" name="title_button" placeholder="titre du bouton" class="w-100 m-1-right m-1-bottom">
+
+								<div class="input-custom w-100">
+									<img src="{{asset('assets/link_icon.svg') }}" alt="icone lien" id="bloc2_icon-url_page-accueil-header" class="icon-custom-link">
+									<input list="urls" name="url" id="bloc2_url_page-accueil-header" placeholder="lien du bouton" type="url">
+									<datalist id="bloc2_urls">
+										<option value="page accueil"></option>
+										<option value="page contact"></option>
+										<option value="page présentation"></option>
+										<option value="page lieu"></option>
+										<option value="page produits"></option>
+									</datalist>
+								</div>
+							</div>
+						</div>
+						<button class="btn sweet-button p-05 m-1-top">Valider</button>
+					</div>
+
+
+					<!-- bloc1 -->
+
+		</section>
+		<div class="flex-h-spacebetween m-2-top">
+			<div class="flex-center-h">
+				<a class="input btn alert-button" href="{{path('bo_pages')}}">Annuler</a>
+			</div>
+
+			<div class="flex">
+
+				<input type="submit" value="Enregistrer" class="btn sweet-button">
+			</div>
+		</div>
+	</form>
+
+{% endblock %}
+{% block javascripts %}
+
+{% endblock %}

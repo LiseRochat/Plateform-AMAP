@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+	<link href="{{asset('css/boProducts.css') }}" rel="stylesheet">
+	<link href="{{asset('css/backoffice.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+	HO | Page Contact
+{% endblock %}
+{% block body %}
+<!--titre de la page-->
+            <section class="flex-center-h m-1-bottom">
+                <p class="arianeText">Pages | </p>
+                <h1 class="h1-geen"> Page Contact </h1>
+            </section>
+            <!--ouverture du grand formulaire-->
+            <form method="post" >
+                <section class="page-content  p-2">
+                        <!-- Module Banniere -->
+                        <article class=" m-1-b m-3-bottom">
+                            <!--partie 1 titre2 -->
+                            <div class="flex-center-h">
+                                <div class="circle h2">1</div>
+                                <h2 class="h2 flex-center-h">Formulaire d'inscription </h2><button style="cursor: pointer;"
+                                id="openpopup-page-accueil-seo"></button><span class="textDetails">non-modifiable</span>
+                            </div> 
+                            <!--fin titre2 -->
+                            <div class="m-2-left">
+                                <div class="m-1">
+                                    <h3 class="h3">
+                                        <label for="title_catchphrase">
+                                        Titre <span class="textDetails">Vous pouvez ici expliquer aux personnes que le formulaire contact ne permet pas de s'inscrire</span>
+                                        </label>
+                                    </h3>
+                                    <input type="text" id="title_catchphrase" name="title_catchphrase">   
+                                </div>
+                                <div class="m-1">
+                                    <h3>
+                                        <label for="title_banniere">
+                                            Texte
+                                        </label>
+                                    </h3>
+                                  <textarea id="title_banniere" name="title_banniere"  cols="2" rows="2" class="w-100 placeholder"
+                                    placeholder="Entrez ici des explications concernant le système de contact"></textarea>
+                                </div>
+                                <div class="flex m-1-left w-100">
+                                    <div class="w-70 m-2-right">
+                                        <h3>Bouton</h3>
+                                        <div class="b-1 p-05  flex">
+                                            <input type="text" id="title_button" name="title_button" placeholder="titre du bouton" class="w-50 m-1-right">
+                                            
+                                            <div class="input-custom w-50">
+                                                <img src="{{asset('assets/link_icon.svg') }}" alt="icone lien" id="icon-url_page-accueil-header"  class="icon-custom-link" >
+                                                <input list="urls" name="url" id="url_page-accueil-header" placeholder="lien du bouton" type="url" >
+                                                <datalist id="urls">
+                                                    <option value="page accueil">
+                                                    <option value="page contact">
+                                                    <option value="page présentation">
+                                                    <option value="page lieu">
+                                                    <option value="page produits">
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                    </div>      
+                                </div> 
+                            </div>
+                            <button class="btn sweet-button p-05 m-1">Valider</button> 
+                        </article>
+                    <!-- Module Formulaire de contact -->
+                    <article  class=" m-1-b m-3-bottom">
+                        <!--partie 2 titre2 -->
+                        <div class="flex-center-h">
+                            <div class="circle h2">2</div>
+                            <h2 class="h2 flex-center-h">Formulaire de contact </h2><button style="cursor: pointer;"
+                            id="openpopup-page-contact-form"></button><span class="textDetails">Créez ici votre formulaire de contact</span>
+                        </div>
+                        <!--fin titre2 -->
+                        <div class="m-1-left w-100">
+                            <div class="m-2-right m-1 flex-center-h">
+                                <h3 class="h3">Nom</h3><span class="textDetails m-1-left">Non-modifiable</span>
+                            </div>
+                            <div class="m-2-right m-1 flex-center-h">
+                                <h3 class="h3">Prénom</h3><span class="textDetails m-1-left">Non-modifiable</span>
+                            </div>
+                            <div class="m-2-right m-1 flex-center-h">
+                                <h3 class="h3">Adresse mail</h3><span class="textDetails m-1-left">Non-modifiable</span>
+                            </div>
+
+                            <div class="m-2-right m-1-top m-1-left flex-center-h">
+                                <h3 class="h3"><label for="objet">
+                                    Objet
+                                  </label></h3><span class="textDetails m-1-left">exemple: renseignements sur les paniers, devenir bénévoles...</span>
+                            </div>
+                            <input type="text" id="add-form" name="add-form" class="m-1-left w-90">
+                            <button class="btn sweet-button p-05 m-1">Ajouter un objet</button>
+                            <!-- <input type="submit" name="submit-add-form" value="Ajouter un objet"  class="btn sweet-button p-05 m-1 w-a">        -->
+                        </div> 
+                    </article>
+                </section>
+                <!-- WIP -->
+                <div class="flex-h-spacebetween m-2-top">
+                    <div class="flex-center-h">
+                    
+					<a class="input btn alert-button" href="{{path('bo_pages')}}">Annuler</a>
+				</div>
+
+				<div class="flex">
+					
+					<input type="submit" value="Enregistrer" class="btn sweet-button">
+				</div>
+                </div>
+            </form>
+{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+            <script type="text/javascript" src="{{asset('js/navbo.js')}}"></script>
+        {% endblock %}
