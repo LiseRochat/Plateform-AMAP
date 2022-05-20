@@ -1,3 +1,4 @@
+<div id="top"></div>
 
 # Plateforme AMAP | Projet de formation 
 
@@ -6,8 +7,20 @@
 Formation's project currently being evolved into a major project for the association AMAP AURA.
 The project is being completely overhauled.
 
+### Table of Content
+1. [Installation](#installation)
+3. [Run Locally](#run-locally)
+4. [Technologies](#technologies)
+5. [Inscription with mail/checking](#inscription-with-mail-checking)
+6. [BackOffice with product CRUD](#backoffice-with-product-crud)
+7. [Team for the V.0](#team-for-the-v.0)
+8. [Team for the V.1](#team-for-the-v.1)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ![ho](https://user-images.githubusercontent.com/87066549/164452025-dd968e90-33f9-4102-bcf5-ce4b39947846.png)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Installation
 
@@ -55,11 +68,15 @@ Install dependencies
 
 install and run the database (you can download it in the repository)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Technologies
 
 - PHP 
 - SASS
 - SQL
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Inscription with mail/checking
 
@@ -77,6 +94,8 @@ pw : azertyui
 
 ![connexion](https://user-images.githubusercontent.com/87066549/164469680-5f389a5d-e4b5-430e-8b31-1e007e284fba.png)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## BackOffice with product CRUD
 
 
@@ -84,15 +103,7 @@ pw : azertyui
 https://user-images.githubusercontent.com/87066549/164471225-a945f8b6-96ff-48ce-93e8-a80dfeb66e49.mp4
 
 
-
-## New FrontOffice Version (V.1)
-
-
-https://user-images.githubusercontent.com/87066549/164473706-da4c8071-7713-4a04-a7b1-f62b46167f8b.mp4
-
-
-
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Team for the V.0
 
@@ -104,9 +115,12 @@ https://user-images.githubusercontent.com/87066549/164473706-da4c8071-7713-4a04-
 
 [Julie](https://github.com/julieprunaret/) : UI/UI DESIGN / full stack development / project organization
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Team for the V.1
 
 [Lise](https://github.com/LiseRochat) : Project management / full stack development / project organization
 
 [Julie](https://github.com/julieprunaret/) : UI/UI DESIGN / full stack development / project organization
+
+<p align="right">(<a href="#top">back to top</a>)</p>
